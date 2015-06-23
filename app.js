@@ -2,6 +2,11 @@ var express = require('express'),
     app = express(),
     request = require('request');
 
+var port = 3000;
+if (process.argv.indexOf('--production') > -1) {
+	port = 80;
+}
+
 var loadTimeout;
 var interval = 15*1000;
 var IPPlugMeter = '10.10.11.144';
@@ -77,6 +82,6 @@ var status;
     });
  }
 
-var server = app.listen(80);
-console.log('Servidor Express iniciado na porta %s', server.address().port);
+var server = app.listen(port);
+console.log('Servidor Express iniciado na porta %s', port);
 getStatus();
