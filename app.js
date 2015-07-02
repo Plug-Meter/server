@@ -26,11 +26,6 @@ var rede = 127.0;
 var precokWh = 0.71;
 var status;
 
-app.get('/', function(req, res) {
-	// TODO: Status server, status plug meter
-	res.send('Server is up');
-});
-
 app.get('/custo_estimado', function(req, res){
 	console.log("REQUEST: " + req.method + " " + req.url);
 	router.getCustoEstimado(req, res);
