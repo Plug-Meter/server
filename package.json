@@ -4,6 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "node app.js",
+    "start-production": "node app.js --production",
+    "mock": "node app.js --mock",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
